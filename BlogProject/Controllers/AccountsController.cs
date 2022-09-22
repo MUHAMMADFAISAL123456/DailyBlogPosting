@@ -42,7 +42,7 @@ namespace BlogProject.Controllers
                 newRegisteredUser.isPartTimeJob = model.isPartTimeJob;
                 newRegisteredUser.AddressDetails = model.AddressDetails;
                 newRegisteredUser.Gender = model.Gender;
-                newRegisteredUser.City = db.Cities.Where(c => c.ID == model.CityID).FirstOrDefault();
+                newRegisteredUser.City = db.Cities.Where(c => c.ID == 1).FirstOrDefault();
 
                 db.Users.Add(newRegisteredUser);
                 db.SaveChanges();
